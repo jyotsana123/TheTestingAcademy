@@ -8,34 +8,31 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class TagnameLocator {
+public class TagnameLocator2 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://app.vwo.com/#/login");
+		System.out.println(driver.findElements(By.tagName("a")).size());
 		List<WebElement> allInput = driver.findElements(By.tagName("a"));
 		for(WebElement w :allInput)
 		{
-			try {
-			System.out.println(w.getText());
+	        String link = w.getText();
+			System.out.println(link);
 			
 			
-			if(w.getText().contains("Read"))
+			if(link.contains("Read"))
 			{
 				w.click();
+				break;
 			}
 			
-			}
-			catch(Exception e)
-			{
-				System.out.println(e);
-				
-			}
+			
 		}
 		
-		Assert.assertEquals(driver.getTitle(), "Get Started with Free Trial | VWO");
+		//Assert.assertEquals(driver.getTitle(), "Get Started with Free Trial | VWO");
 	}
 
 }
