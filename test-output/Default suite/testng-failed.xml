@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Pramod.TheTestingAcademy.VwoLogin">
+      <class name="DataDrivenTesting.KatalonLogin">
         <methods>
-          <include name="tearDown"/>
-          <include name="TestInvalidLogin"/>
-          <include name="setUp"/>
+          <include name="katalonLogin" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- Pramod.TheTestingAcademy.VwoLogin -->
+      </class> <!-- DataDrivenTesting.KatalonLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

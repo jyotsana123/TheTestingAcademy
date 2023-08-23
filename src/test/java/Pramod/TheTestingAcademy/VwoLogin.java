@@ -34,7 +34,7 @@ public class VwoLogin {
 	public void TestInvalidLogin() throws InterruptedException
 	{
 		driver.get("https://app.vwo.com/#/login");
-		driver.findElement(By.id("login-username")).sendKeys("93npu2yyb009@esiix.com");
+		driver.findElement(By.id("login-username")).sendKeys("93npu2yyb0@esiix.co");
 		driver.findElement(By.name("password")).sendKeys("Wingify@123");
 		driver.findElement(By.className("btn--positive")).click();
 		Thread.sleep(2000);
